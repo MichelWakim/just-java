@@ -19,10 +19,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
+     * Global Variable
+     */
+    int numberOfCoffees = 0;
+    /**
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int numberOfCoffees = 1;
         display(numberOfCoffees);
         displayPrice(numberOfCoffees * 5);
     }
@@ -31,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the + button is clicked.
      */
     public void increment(View view) {
-        int numberOfCoffees = 2;
+        numberOfCoffees ++;
         display(numberOfCoffees);
         displayPrice(numberOfCoffees * 5);
     }
@@ -40,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the - button is clicked.
      */
     public void decrement(View view) {
-        int numberOfCoffees = 0;
+        numberOfCoffees --;
         display(numberOfCoffees);
         displayPrice(numberOfCoffees * 5);
     }
