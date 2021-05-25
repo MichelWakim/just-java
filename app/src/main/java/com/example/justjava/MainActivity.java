@@ -22,11 +22,13 @@ public class MainActivity extends AppCompatActivity {
      * Global Variable
      */
     int numberOfCoffees = 0;
+    int pricePerCup = 5;
     /**
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        String priceMessage = "Total: $ " + numberOfCoffees * 5 + "\nThank you!";
+        int price = calculatePrice();
+        String priceMessage = "Total: $ " + price + "\nThank you!";
         displayMessage(priceMessage);
     }
 
@@ -68,5 +70,11 @@ public class MainActivity extends AppCompatActivity {
     private void displayMessage(String message) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(message);
+    }
+    /**
+     * This method calculates price.
+     */
+    private int calculatePrice () {
+        return numberOfCoffees * pricePerCup;
     }
 }
