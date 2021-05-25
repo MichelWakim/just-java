@@ -12,6 +12,12 @@ import java.text.NumberFormat;
  */
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * Global Variable
+     */
+    int numberOfCoffees = 0;
+    int pricePerCup = 5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,16 +25,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Global Variable
-     */
-    int numberOfCoffees = 0;
-    int pricePerCup = 5;
-    /**
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
         int price = calculatePrice();
-        String priceMessage = "Total: $ " + price + "\nThank you!";
+        String priceMessage = orderSummary(price);
         displayMessage(priceMessage);
     }
 
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the + button is clicked.
      */
     public void increment(View view) {
-        numberOfCoffees ++;
+        numberOfCoffees++;
         display(numberOfCoffees);
     }
 
@@ -44,16 +45,8 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the - button is clicked.
      */
     public void decrement(View view) {
-        numberOfCoffees --;
+        numberOfCoffees--;
         display(numberOfCoffees);
-    }
-
-    /**
-     * This method displays the given price on the screen.
-     */
-    private void displayPrice(int number) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
     }
 
     /**
@@ -71,10 +64,19 @@ public class MainActivity extends AppCompatActivity {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(message);
     }
+
     /**
      * This method calculates price.
+     *
+     * @return total price
      */
-    private int calculatePrice () {
-        return numberOfCoffees * pricePerCup;
+    private int calculatePrice() { return numberOfCoffees * pricePerCup; }
+
+    /**
+     * This method is called when the order button is clicked.
+     */
+    public String orderSummary(int price) {
+         return "Name: Micho\nQuantity: " + numberOfCoffees + "\nTotal: $ " + price + "\nThank you!";
     }
+
 }
