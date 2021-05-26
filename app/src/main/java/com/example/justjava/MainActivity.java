@@ -32,8 +32,6 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int price = calculatePrice();
-
         // creating object of checkbox
         CheckBox whippedCream = (CheckBox) findViewById(R.id.whipped_cream_checkbox);
         // checking if the checkbox Whipped Cream is checked or not
@@ -51,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
         EditText inputName =  (EditText) findViewById(R.id.name_input) ;
         // Storing data input to string
         String hasName = inputName.getText().toString();
+
+        int price = calculatePrice(hasWhippedCream, hasChocolate);
 
         String priceMessage = orderSummary(price, hasWhippedCream, hasChocolate, hasName);
         displayMessage(priceMessage);
@@ -91,10 +91,17 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method calculates price.
      *
+     * @param addWhippedCream to determine if the customer need extra whipped cream to add
+     * @param addChocolate to determine if the customer need extra chocolate to add
      * @return total price
      */
-    private int calculatePrice() {
-        return numberOfCoffees * pricePerCup;
+    private int calculatePrice(boolean addWhippedCream, boolean addChocolate) {
+        int price = pricePerCup;
+
+        if ( addWhippedCream ) price ++;
+        if ( addChocolate ) price += 2;
+
+        return numberOfCoffees * price;
     }
 
     /**
