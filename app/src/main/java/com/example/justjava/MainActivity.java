@@ -1,5 +1,7 @@
 package com.example.justjava;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -55,7 +57,25 @@ public class MainActivity extends AppCompatActivity {
 
         String priceMessage = orderSummary(price, hasWhippedCream, hasChocolate, hasName);
         displayMessage(priceMessage);
+        composeEmail(hasName, priceMessage);
     }
+
+    /**
+     * This method is for sending an email containing the data
+     *
+     * @param name is the name from the user
+     * @param body is the order summary
+     */
+    public void composeEmail(String name, String body) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setData(Uri.parse("mailto:")); // only email apps should handle this
+        intent.putExtra(Intent.EXTRA_SUBJECT, "JustJava Order for " + name);
+        intent.putExtra(Intent.EXTRA_TEXT, body);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
+
 
     /**
      * This method is called when the + button is clicked.
