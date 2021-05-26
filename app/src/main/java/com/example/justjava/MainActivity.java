@@ -31,12 +31,20 @@ public class MainActivity extends AppCompatActivity {
      */
     public void submitOrder(View view) {
         int price = calculatePrice();
+
         // creating object of checkbox
         CheckBox whippedCream = (CheckBox) findViewById(R.id.whipped_cream_checkbox);
         // checking if the checkbox Whipped Cream is checked or not
         boolean hasWhippedCream = whippedCream.isChecked();
+
+        // creating object of checkbox
+        CheckBox chocolate = (CheckBox) findViewById(R.id.chocolate_checkbox);
+        // checking if the checkbox chocolate is checked or not
+        boolean hasChocolate = chocolate.isChecked();
+
         // logging to the console the value of the boolean variable
-        Log.v("toppings", String.valueOf(hasWhippedCream));
+        //Log.v("toppings", String.valueOf(hasWhippedCream));
+
         String priceMessage = orderSummary(price, hasWhippedCream);
         displayMessage(priceMessage);
     }
