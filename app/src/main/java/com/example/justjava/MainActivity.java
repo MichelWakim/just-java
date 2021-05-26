@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         // logging to the console the value of the boolean variable
         //Log.v("toppings", String.valueOf(hasWhippedCream));
 
-        String priceMessage = orderSummary(price, hasWhippedCream);
+        String priceMessage = orderSummary(price, hasWhippedCream, hasChocolate);
         displayMessage(priceMessage);
     }
 
@@ -96,9 +96,10 @@ public class MainActivity extends AppCompatActivity {
      * @param price is for the order
      * @return the summary to be printed to the screen
      */
-    public String orderSummary(int price, boolean hasWhippedCream) {
+    public String orderSummary(int price, boolean addWhippedCream, boolean addChocolate) {
         return "Name: Micho"
-                + "\nAdd Whipped Cream ? " + hasWhippedCream
+                + "\nAdd Whipped Cream ? " + addWhippedCream
+                + "\nAdd Chocolate ? " + addChocolate
                 + "\nQuantity: " + numberOfCoffees
                 + "\nTotal: $ " + price + "\nThank you!";
 
