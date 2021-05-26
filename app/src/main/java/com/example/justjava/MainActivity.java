@@ -94,7 +94,10 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      *
      * @param price is for the order
-     * @return the summary to be printed to the screen
+     * @param addWhippedCream is whether or not the user wants whipped cream topping
+     * @param addChocolate is whether or not the user wants chocolate topping
+     * @param price of the order
+     * @return text summary
      */
     public String orderSummary(int price, boolean addWhippedCream, boolean addChocolate) {
         return "Name: Micho"
