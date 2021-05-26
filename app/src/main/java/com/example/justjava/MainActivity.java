@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void decrement(View view) {
         // avoiding the user to choose negative value
-        if ( numberOfCoffees == 1) return;
+        if ( numberOfCoffees <= 1) return;
         numberOfCoffees--;
         display(numberOfCoffees);
     }
