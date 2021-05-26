@@ -2,9 +2,11 @@ package com.example.justjava;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
@@ -45,7 +47,12 @@ public class MainActivity extends AppCompatActivity {
         // logging to the console the value of the boolean variable
         //Log.v("toppings", String.valueOf(hasWhippedCream));
 
-        String priceMessage = orderSummary(price, hasWhippedCream, hasChocolate);
+        // Creating Object for the input field
+        EditText inputName =  (EditText) findViewById(R.id.name_input) ;
+        // Storing data input to string
+        String hasName = inputName.getText().toString();
+
+        String priceMessage = orderSummary(price, hasWhippedCream, hasChocolate, hasName);
         displayMessage(priceMessage);
     }
 
@@ -99,8 +106,8 @@ public class MainActivity extends AppCompatActivity {
      * @param price of the order
      * @return text summary
      */
-    public String orderSummary(int price, boolean addWhippedCream, boolean addChocolate) {
-        return "Name: Micho"
+    public String orderSummary(int price, boolean addWhippedCream, boolean addChocolate, String name) {
+        return "Name: " + name
                 + "\nAdd Whipped Cream ? " + addWhippedCream
                 + "\nAdd Chocolate ? " + addChocolate
                 + "\nQuantity: " + numberOfCoffees
