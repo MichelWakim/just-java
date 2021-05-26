@@ -60,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the + button is clicked.
      */
     public void increment(View view) {
+        // avoiding the user to choose value bigger than 100
+        if ( numberOfCoffees == 100) return;
         numberOfCoffees++;
         display(numberOfCoffees);
     }
@@ -68,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the - button is clicked.
      */
     public void decrement(View view) {
+        // avoiding the user to choose negative value
+        if ( numberOfCoffees == 1) return;
         numberOfCoffees--;
         display(numberOfCoffees);
     }
@@ -97,8 +101,9 @@ public class MainActivity extends AppCompatActivity {
      */
     private int calculatePrice(boolean addWhippedCream, boolean addChocolate) {
         int price = pricePerCup;
-
+        // add one dollar if the user wants whipped cream
         if ( addWhippedCream ) price ++;
+        // add two dollars if the user wants chocolate
         if ( addChocolate ) price += 2;
 
         return numberOfCoffees * price;
