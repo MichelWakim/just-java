@@ -1,4 +1,4 @@
-package com.example.justjava;
+ package com.example.justjava;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -143,7 +143,6 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method is called when the order button is clicked.
      *
-     * @param price           is for the order
      * @param addWhippedCream is whether or not the user wants whipped cream topping
      * @param addChocolate    is whether or not the user wants chocolate topping
      * @param price           of the order
