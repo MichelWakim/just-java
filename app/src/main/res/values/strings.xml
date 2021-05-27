@@ -7,4 +7,6 @@
     <string name="quantity">quantity</string>
     <string name="order_summary">Order Summary</string>
     <string name="order" >Order</string>
+    <string name="increase" translatable="false">+</string>
+    <string name="decrease" translatable="false">-</string>
 </resources>
