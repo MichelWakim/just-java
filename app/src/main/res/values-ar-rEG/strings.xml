@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">فقط جافا</string>
     <string name="input_name">ادخل اسمك</string>
     <string name="toppings">الاضافات</string>
     <string name="whipped_cream">كريمة مخفوقة</string>
     <string name="chocolate">"شوكولاته "</string>
-    <string name="quantity">الكمية</string>
     <string name="order_summary">ملخص الطلب</string>
     <string name="order">اطلب</string>
+    <string name="quantity_header">الكمبة</string>
+    <string name="thank" >\n!شكرا</string>
+    <!-- Strings that take input variables -->
+    <string name="quantity_value" > <xliff:g id="quantity_number" example="0">%d</xliff:g>  </string>
+    <string name="name">الاسم : <xliff:g id="name" example="Michel">%s</xliff:g></string>
+    <string name="add_whipped_cream">\nإضافة كريمة مخفوقة ؟ <xliff:g id="whippedCream" example="true">%b</xliff:g></string>
+    <string name="add_choccolate">\nإضافة شكولاته؟ <xliff:g id="chocolate" example="true">%b</xliff:g></string>
+    <string name="quantity_output">\n الكمية : <xliff:g id="quantity" example="1">%d</xliff:g></string>
+    <string name="price">\nالإجمالي : $ <xliff:g id = "price" example = "20">%d</xliff:g></string>
+    <string name="max_warning">"لا يمكنك الحصول علي أكثر من 100 قهوة "</string>
+    <string name="min_warning">"لا يمكنك الحصول علي أأقل من 1 قهوة "</string>
+
 </resources>

@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        display(numberOfCoffees);
     }
 
     /**
@@ -84,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
         // avoiding the user to choose value bigger than 100
         if (numberOfCoffees == 100) {
             // Show an error message as a toast
-            Toast.makeText(this, "You cannot have more than 100 coffees", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.max_warning), Toast.LENGTH_SHORT).show();
             // Exit this method early because there's nothing left to do
             return;
         }
@@ -99,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         // avoiding the user to choose negative value
         if (numberOfCoffees <= 1) {
             // Show an error message as a toast
-            Toast.makeText(this, "You cannot have less than 1 coffee", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.min_warning), Toast.LENGTH_SHORT).show();
             // Exit this method early because there's nothing left to do
             return;
         }
@@ -112,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void display(int number) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
-        quantityTextView.setText("" + number);
+        quantityTextView.setText(getString(R.string.quantity_value,  number));
     }
 
     /**
@@ -149,12 +150,12 @@ public class MainActivity extends AppCompatActivity {
      * @return text summary
      */
     public String orderSummary(int price, boolean addWhippedCream, boolean addChocolate, String name) {
-        return "Name: " + name
-                + "\nAdd Whipped Cream ? " + addWhippedCream
-                + "\nAdd Chocolate ? " + addChocolate
-                + "\nQuantity: " + numberOfCoffees
-                + "\nTotal: $ " + price + "\nThank you!";
-
+        return getString(R.string.name, name)
+                + getString(R.string.add_whipped_cream, addWhippedCream)
+                + getString(R.string.add_choccolate, addChocolate)
+                + getString(R.string.quantity_output, numberOfCoffees)
+                + getString(R.string.price, price)
+                +getString(R.string.thank);
     }
 
 }

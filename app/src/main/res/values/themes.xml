@@ -7,19 +7,4 @@
         <item name="colorAccent">@color/teal_200</item>
         <!-- Customize your theme here. -->
     </style>
-
-    <style name="header">
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="textAllCaps">true</item>
-        <item name="android:layout_margin">8dp</item>
-    </style>
-
-    <style name="checkbox">
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:paddingRight">24dp</item>
-        <item name="android:paddingLeft">24dp</item>
-        <item name="android:textSize">16sp</item>
-    </style>
 </resources>

@@ -1,12 +1,31 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">just java</string>
     <string name="input_name">Enter Your Name</string>
     <string name="toppings">Toppings</string>
     <string name="whipped_cream">Whipped Cream</string>
     <string name="chocolate">Chocolate</string>
-    <string name="quantity">quantity</string>
+    <string name="quantity_header">quantity</string>
     <string name="order_summary">Order Summary</string>
     <string name="order" >Order</string>
     <string name="increase" translatable="false">+</string>
     <string name="decrease" translatable="false">-</string>
+    <string name="thank" >\nThank you!</string>
+    <string name="max_warning">You cannot have more than 100 coffees</string>
+    <string name="min_warning">You cannot have less than 1 coffees</string>
+    <!-- Strings that take input variables -->
+    <!-- input variable is type integer-->
+    <string name="quantity_value" > <xliff:g id="quantity_number" example="0">%d</xliff:g>  </string>
+    <!-- input variable is type string-->
+    <string name="name">Name: <xliff:g id="name" example="Michel">%s</xliff:g></string>
+    <!-- input variable is type boolean-->
+    <string name="add_whipped_cream">\nAdd Whipped Cream ? <xliff:g id="whippedCream" example="true">%b</xliff:g></string>
+    <!-- input variable is type boolean-->
+    <string name="add_choccolate">\nAdd Chocolate ? <xliff:g id="chocolate" example="true">%b</xliff:g></string>
+    <!-- input variable is type integer-->
+    <string name="quantity_output">\nQuantity: <xliff:g id="quantity" example="1">%d</xliff:g></string>
+    <!-- input variable is type integer-->
+    <string name="price">\nTotal: $ <xliff:g id = "price" example = "20">%d</xliff:g></string>
+
+
+
 </resources>
