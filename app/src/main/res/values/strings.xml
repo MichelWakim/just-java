@@ -6,26 +6,27 @@
     <string name="chocolate">Chocolate</string>
     <string name="quantity_header">quantity</string>
     <string name="order_summary">Order Summary</string>
-    <string name="order" >Order</string>
+    <string name="order">Order</string>
     <string name="increase" translatable="false">+</string>
     <string name="decrease" translatable="false">-</string>
-    <string name="thank" >\nThank you!</string>
+    <string name="thank">\nThank you!</string>
     <string name="max_warning">You cannot have more than 100 coffees</string>
     <string name="min_warning">You cannot have less than 1 coffees</string>
     <!-- Strings that take input variables -->
     <!-- input variable is type integer-->
-    <string name="quantity_value" > <xliff:g id="quantity_number" example="0">%d</xliff:g>  </string>
+    <string name="quantity_value"> <xliff:g example="0" id="quantity_number">%d</xliff:g>  </string>
     <!-- input variable is type string-->
-    <string name="name">Name: <xliff:g id="name" example="Michel">%s</xliff:g></string>
+    <string name="name">Name: <xliff:g example="Michel" id="name">%s</xliff:g></string>
     <!-- input variable is type boolean-->
-    <string name="add_whipped_cream">\nAdd Whipped Cream ? <xliff:g id="whippedCream" example="true">%b</xliff:g></string>
+    <string name="add_whipped_cream">\nAdd Whipped Cream ? <xliff:g example="true" id="whippedCream">%b</xliff:g></string>
     <!-- input variable is type boolean-->
-    <string name="add_choccolate">\nAdd Chocolate ? <xliff:g id="chocolate" example="true">%b</xliff:g></string>
+    <string name="add_choccolate">\nAdd Chocolate ? <xliff:g example="true" id="chocolate">%b</xliff:g></string>
     <!-- input variable is type integer-->
-    <string name="quantity_output">\nQuantity: <xliff:g id="quantity" example="1">%d</xliff:g></string>
+    <string name="quantity_output">\nQuantity: <xliff:g example="1" id="quantity">%d</xliff:g></string>
     <!-- input variable is type integer-->
-    <string name="price">\nTotal: $ <xliff:g id = "price" example = "20">%d</xliff:g></string>
-
+    <string name="price">\nTotal: $ <xliff:g example="20" id="price">%d</xliff:g></string>
+    <!-- input variable is type string-->
+    <string name="mail_subject">JustJava Order for <xliff:g example="Michel" id="name">%s</xliff:g></string>
 
 
 </resources>

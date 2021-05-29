@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
     public void composeEmail(String name, String body) {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this
-        intent.putExtra(Intent.EXTRA_SUBJECT, "JustJava Order for " + name);
+        intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.mail_subject, name)); 
         intent.putExtra(Intent.EXTRA_TEXT, body);
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
