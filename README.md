@@ -12,7 +12,9 @@ concepts :
 
 Screenshots:
 ------------
-<img src="./screenshots/Screenshot_1622130337.png" width="50" height="100">
+<img src="./screenshots/Screenshot_1622130337.png" width="100" height="205">
+
+
 ![alt text]( ./screenshots/Screenshot_1622130337.png )  
 ![alt text]( ./screenshots/Screenshot_1622130356.png "Screenshot")
 ![alt text]( ./screenshots/Screenshot_1622130407.png "Screenshot")
